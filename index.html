@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+ 
+<body>
+    <h1>TIME TABLE APP</h1>
+        <label>Enter course name: <input id="course" name="course" type="text"/></label>
+        <label>Select slot
+            <select name="slot" id="slot">
+                <option value="A1">A1</option>
+                <option value="B1">B1</option>
+                <option value="C1">C1</option>
+                <option value="D1">D1</option>
+                <option value="E1">E1</option>
+                <option value="F">F</option>
+                <option value="G">G</option>
+                <option value="H">H</option>
+                <option value="P1">P1</option>
+                <option value="Q1">Q1</option>
+                <option value="R1">R1</option>
+                <option value="S1">S1</option>
+                <option value="T1">T1</option>
+              </select>
+        </label>
+        <label> Include Plus Slots 
+            <input type="checkbox" id="Plus" name="Plus" value="includePlus">
+        </label>
+        <button id="submitbtn">Submit</button> 
+
+    <br><br>
+    <table border="5" cellspacing="0" align="center">
+        <tr>
+            <td align="center" height="50"
+                width="100"><br>
+                <b>Day/Period</b></br>
+            </td>
+            <td align="center" height="50"
+                width="100">
+                <b>I<br>8:00-8:50</b>
+            </td>
+            <td align="center" height="50"
+                width="100">
+                <b>II<br>9:00-9:50</b>
+            </td>
+            <td align="center" height="50"
+                width="100">
+                <b>III<br>10:00-10:50</b>
+            </td>
+            <td align="center" height="50"
+                width="100">
+                <b>IV<br>11:00-11:50</b>
+            </td>
+            <td align="center" height="50"
+                width="100">
+                <b>V<br>12:00-12:50</b>
+            </td>
+            <td align="center" height="50"
+                width="100">
+                <b>VI<br>12:50-2:00</b>
+            </td>
+            <td align="center" height="50"
+                width="100">
+                <b>VII<br>2:00-2:50</b>
+            </td>
+            <td align="center" height="50"
+                width="100">
+                <b>VIII<br>3:00-3:50</b>
+            </td>
+            <td align="center" height="50"
+                width="100">
+                <b>IX<br>4:00-4:50</b>
+            </td>
+            <td align="center" height="50"
+                width="100">
+                <b>X<br>5:00-5:50</b>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" height="50">
+                <b>Monday</b></td>
+            <td align="center" height="50" class="F" id="11"></td>
+            <td align="center" height="50" class="A1" id="12"></td>
+            <td align="center" height="50" class="B1" id="13"></td>
+            <td align="center" height="50" class="C1" id="14"></td>
+            <td align="center" height="50" class="D1+" id="15"></td>
+            <td rowspan="6" align="center" height="50">
+                <h2>L<br>U<br>N<br>C<br>H</h2>
+            </td>
+            <td colspan="3" align="center"
+                height="50" id="P1"></td>
+            <td align="center" height="50" class="G"></td>
+        </tr>
+        <tr>
+            <td align="center" height="50">
+                <b>Tuesday</b>
+            </td>
+            <td align="center" height="50" class="H"></td>
+            <td align="center" height="50" class="B1"></td>
+            <td align="center" height="50" class="C1"></td>
+            <td align="center" height="50" class="D1"></td>
+            <td align="center" height="50" class="E1+"></td>
+            <td colspan="3" align="center"
+                height="50" class="Q1"></td>
+            <td align="center" height="50" class="F"></td>
+        </tr>
+        <tr>
+            <td align="center" height="50">
+                <b>Wednesday</b>
+            </td>
+            <td align="center" height="50" class="G"></td>
+            <td align="center" height="50" class="C1"></td>
+            <td align="center" height="50" class="D1"></td>
+            <td align="center" height="50" class="E1"></td>
+            <td align="center" height="50" class="A1+"></td>
+            <td colspan="3" align="center"
+                height="50" class="R1">
+            </td>
+            <td align="center" height="50" class="H"></td>
+        </tr>
+        <tr>
+            <td align="center" height="50">
+                <b>Thursday</b>
+            </td>
+            <td align="center" height="50" class="F"></td>
+            <td align="center" height="50" class="D1"></td>
+            <td align="center" height="50" class="E1"></td>
+            <td align="center" height="50" class="A1"></td>
+            <td align="center" height="50" class="B1+"></td>
+            <td colspan="3" align="center"
+                height="50" class="S1">
+            </td>
+            <td align="center" height="50" class="G"></td>
+        </tr>
+        <tr>
+            <td align="center" height="50">
+                <b>Friday</b>
+            </td>
+            <td align="center" height="50" class="H"></td>
+            <td align="center" height="50" class="E1"></td>
+            <td align="center" height="50" class="A1"></td>
+            <td align="center" height="50" class="B1"></td>
+            <td align="center" height="50" class="C1+"></td>
+            <td colspan="3" align="center"
+                height="50" class="T1">
+            </td>
+            <td align="center" height="50" class="F+"></td>
+        </tr>
+    </table>
+</body>
+ <script>
+    function validateForm()
+    {
+        // let courseName = document.forms["addValue"]["course"].value;
+        // let slot = document.forms["addValue"]["slot"].value;
+        // let slots = document.getElementsByClassName(slot);
+
+        let courseName = document.getElementById("course").value;
+        let slot = document.getElementById("slot").value;
+        let slots = document.getElementsByClassName(slot);
+        for(var i = 0; i < slots.length; i++)
+        {
+            slots[i].innerHTML = courseName;
+        }
+    }
+
+    var btn = document.getElementById("submitbtn");
+    btn.addEventListener("click", validateForm);
+ </script>
+</html>
