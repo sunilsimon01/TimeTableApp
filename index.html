@@ -39,52 +39,52 @@
         align="center" >
             <tr>
                 <td align="center" height="50"
-                    width="100" class=""><br>
+                    width="100" class="top"><br>
                     <b>Day/Period</b></br>
                 </td>
                 <td align="center" height="50"
-                    width="100">
+                    width="100" class="top">
                     <b>I<br>8:00-8:50</b>
                 </td>
                 <td align="center" height="50"
-                    width="100">
+                    width="100" class="top">
                     <b>II<br>9:00-9:50</b>
                 </td>
                 <td align="center" height="50"
-                    width="100">
+                    width="100" class="top">
                     <b>III<br>10:00-10:50</b>
                 </td>
                 <td align="center" height="50"
-                    width="100">
+                    width="100" class="top">
                     <b>IV<br>11:00-11:50</b>
                 </td>
                 <td align="center" height="50"
-                    width="100">
+                    width="100" class="top">
                     <b>V<br>12:00-12:50</b>
                 </td>
                 <td align="center" height="50"
-                    width="100">
+                    width="100" class="top">
                     <b>VI<br>12:50-2:00</b>
                 </td>
                 <td align="center" height="50"
-                    width="100">
+                    width="100" class="top">
                     <b>VII<br>2:00-2:50</b>
                 </td>
                 <td align="center" height="50"
-                    width="100">
+                    width="100" class="top">
                     <b>VIII<br>3:00-3:50</b>
                 </td>
                 <td align="center" height="50"
-                    width="100">
+                    width="100" class="top">
                     <b>IX<br>4:00-4:50</b>
                 </td>
                 <td align="center" height="50"
-                    width="100">
+                    width="100" class="top">
                     <b>X<br>5:00-5:50</b>
                 </td>
             </tr>
             <tr>
-                <td align="center" height="50">
+                <td align="center" height="50" class="side">
                     <b>Monday</b></td>
                 <td align="center" height="50" class="F" id="11"></td>
                 <td align="center" height="50" class="A1" id="12"></td>
@@ -99,7 +99,7 @@
                 <td align="center" height="50" class="G"></td>
             </tr>
             <tr>
-                <td align="center" height="50">
+                <td align="center" height="50" class="side">
                     <b>Tuesday</b>
                 </td>
                 <td align="center" height="50" class="H"></td>
@@ -112,7 +112,7 @@
                 <td align="center" height="50" class="F"></td>
             </tr>
             <tr>
-                <td align="center" height="50">
+                <td align="center" height="50" class="side">
                     <b>Wednesday</b>
                 </td>
                 <td align="center" height="50" class="G"></td>
@@ -126,7 +126,7 @@
                 <td align="center" height="50" class="H"></td>
             </tr>
             <tr>
-                <td align="center" height="50">
+                <td align="center" height="50" class="side">
                     <b>Thursday</b>
                 </td>
                 <td align="center" height="50" class="F"></td>
@@ -140,7 +140,7 @@
                 <td align="center" height="50" class="G"></td>
             </tr>
             <tr>
-                <td align="center" height="50">
+                <td align="center" height="50" class="side">
                     <b>Friday</b>
                 </td>
                 <td align="center" height="50" class="H"></td>
@@ -236,12 +236,12 @@
                 </td>
             </tr>
             <tr>
-                <td align="center" height="50">
+                <td align="center" height="50" class="side">
                     <b>Monday</b></td>
                 <td align="center" height="50" class="F" id="11"></td>
                 <td colspan="3" align="center"
                     height="50" id="P2"></td>
-                <td rowspan="6" align="center" height="50">
+                <td rowspan="6" align="center" height="50" class="lunch">
                     <h2>L<br>U<br>N<br>C<br>H</h2>
                 </td>
                 <td align="center" height="50" class="D2+" id="12"></td>
@@ -251,7 +251,7 @@
                 <td align="center" height="50" class="G"></td>
             </tr>
             <tr>
-                <td align="center" height="50">
+                <td align="center" height="50" class="side">
                     <b>Tuesday</b>
                 </td>
                 <td align="center" height="50" class="H"></td>
@@ -264,7 +264,7 @@
                 <td align="center" height="50" class="F"></td>
             </tr>
             <tr>
-                <td align="center" height="50">
+                <td align="center" height="50" class="side">
                     <b>Wednesday</b>
                 </td>
                 <td align="center" height="50" class="G"></td>
@@ -278,7 +278,7 @@
                 <td align="center" height="50" class="H"></td>
             </tr>
             <tr>
-                <td align="center" height="50">
+                <td align="center" height="50" class="side">
                     <b>Thursday</b>
                 </td>
                 <td align="center" height="50" class="F"></td>
@@ -292,7 +292,7 @@
                 <td align="center" height="50" class="G"></td>
             </tr>
             <tr>
-                <td align="center" height="50">
+                <td align="center" height="50" class="side">
                     <b>Friday</b>
                 </td>
                 <td align="center" height="50" class="H"></td>
@@ -308,7 +308,9 @@
         </table>
     </div>
     <button id="batchChange">Switch batch</button>
+
     <button id="pdfdownload">Download PDF</button>
+    <button id="iCal">Download iCal</button>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 
@@ -316,7 +318,15 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.6/jspdf.plugin.autotable.min.js"></script>
 
 <script type="text/javascript">
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+ <script>
+
+
     let batch = 1;
+    let inEdit = false;
+
     function validateForm()
     {
         let courseName = document.getElementById("course" + batch).value;
@@ -329,17 +339,31 @@
             slots[i].innerHTML = courseName;
         if(checked.checked)
             for(var i = 0; i < slotsPlus.length; i++)
-                slotsPlus[i].innerHTML = courseName;
+                slotsPlus[i].innerHTML = courseName + "(+)";
         document.getElementById("course" + batch).value = "";
         document.getElementById("slot" + batch).value = "A" + batch;
         checked.checked = false;
     }
 
-    function enterValue()
+    function addText()
     {
-
+        if(this.className == "lunch" || this.className == "top" || this.className == "side" || inEdit)
+            return;
+        inEdit = true;
+        var input = document.createElement("input");
+        input.value = this.innerHTML;
+        input.size = 8;
+        this.innerHTML = "";
+        this.appendChild(input);
+        input.focus();
+        input.addEventListener("focusout", () => {
+            input.parentElement.innerHTML = input.value;
+            input.remove();
+            inEdit = false;
+        });
     }
     
+
 
 	//function for pdf download
 	function exportpdf() {
@@ -416,10 +440,10 @@
         	}
     	})
     	doc.save('output.pdf');
-
 	}
+	
+    document.querySelectorAll("td").forEach(e => e.addEventListener("click", addText));
     
-    document.getElementsByTagName("td")
 	
 	//event handler for submit button
     var btn = document.getElementById("submitbtn1");
@@ -436,6 +460,17 @@
         batch == 1 ? batch = 2 : batch = 1;
         document.getElementById("batch" + batch).style.display = "block";
     });
+
+
+    function generateICS()
+    {
+        var cal = ics();
+        document.querySelectorAll("td").forEach(() => {
+            if(this.className == "lunch" || this.className == "top" || this.className == "side" || inEdit)
+                return;
+            cal.addEvent(this.innerHTML, "", "", );
+        });
+    }
  </script>
 </html>
 
