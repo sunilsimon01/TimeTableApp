@@ -2,12 +2,21 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+
 </head>
-<body>
-    <h1>TIME TABLE APP</h1>
-        <div id="batch1" style="display: block;">
-            <div><label>Enter course name: <input id="course1" name="course" type="text"/></label>
+<body >
+    <div class = "wrapper">
+     
+     <div style= " display:flex;height: 15%; background-color:blueviolet; justify-content: center;"><h1 style="margin: auto; color: aqua;">TIME TABLE APP</h1></div>
+    
+    <br><br>
+        <div id="batch1" style="display: flex" >
+
+            <div id = "details"><label>Enter course name: <input id="course1" name="course" type="text"/></label>
             <label>Select slot
                 <select name="slot" id="slot1">
                     <option value="A1">A1</option>
@@ -28,63 +37,68 @@
             <label> Include Plus Slots 
                 <input type="checkbox" id="Plus1" name="Plus" value="includePlus">
             </label>
-            <button id = "submitbtn1">Add</button></div>
+                <button class="glow-on-hover"  id = "submitbtn1" style = "color:#5390d9 ; font-size: large;">Submit</button>
+                <span></span>
+                <span></span>
+             </div>
         
 
-        <br><br>
-        <table id="table1"
+        
+        <div>
+        <table
+        id = "table1"
         class="table table-bordered"
         class="table table-hover" 
-        border="5" 
+        border="1" 
         cellspacing="0" 
-        align="center" >
-            <tr id="table1head">
+        align="center" 
+        >
+            <tr>
                 <td align="center" height="50"
-                    width="100" class="top"><br>
+                    width="80" class="top"><br>
                     <b>Day/Period</b></br>
                 </td>
                 <td align="center" height="50"
-                    width="100" class="top">
+                    width="80" class="top">
                     <b>I<br>8:00-8:50</b>
                 </td>
                 <td align="center" height="50"
-                    width="100" class="top">
+                    width="80" class="top">
                     <b>II<br>9:00-9:50</b>
                 </td>
                 <td align="center" height="50"
-                    width="100" class="top">
+                    width="80" class="top">
                     <b>III<br>10:00-10:50</b>
                 </td>
                 <td align="center" height="50"
-                    width="100" class="top">
+                    width="80" class="top">
                     <b>IV<br>11:00-11:50</b>
                 </td>
                 <td align="center" height="50"
-                    width="100" class="top">
+                    width="80" class="top">
                     <b>V<br>12:00-12:50</b>
                 </td>
                 <td align="center" height="50"
-                    width="100" class="top">
-                    <b>VI<br>1:00-1:50</b>
+                    width="80" class="top">
+                    <b>VI<br>12:50-2:00</b>
                 </td>
                 <td align="center" height="50"
-                    width="100" class="top">
+                    width="80" class="top">
                     <b>VII<br>2:00-2:50</b>
                 </td>
                 <td align="center" height="50"
-                    width="100" class="top">
+                    width="80" class="top">
                     <b>VIII<br>3:00-3:50</b>
                 </td>
                 <td align="center" height="50"
-                    width="100" class="top">
+                    width="80" class="top">
                     <b>IX<br>4:00-4:50</b>
                 </td>
                 <td align="center" height="50"
-                    width="100" class="top">
+                    width="80" class="top">
                     <b>X<br>5:00-5:50</b>
                 </td>
             </tr>
-            <div id="table1body">
             <tr>
                 <td align="center" height="50" class="side">
                     <b>Monday</b></td>
@@ -155,13 +169,13 @@
                 </td>
                 <td align="center" height="50" class="F+ 17-17:50-FR"></td>
             </tr>
-            </div>
         </table>
+    </div>
     </div>
 
     <!--     Second batch     -->
     <div id="batch2" style="display: none;">
-            <div><label>Enter course name: <input id="course2" name="course" type="text"/></label>
+            <div id = "details2"><label>Enter course name: <input id="course2" name="course" type="text"/></label>
             <label>Select slot
                 <select name="slot" id="slot2">
                     <option value="A2">A2</option>
@@ -182,63 +196,67 @@
             <label> Include Plus Slots 
                 <input type="checkbox" id="Plus2" name="Plus" value="includePlus">
             </label>
-            <button id = "submitbtn2">Add</button></div>
+            <!-- <button id = "submitbtn2">Add</button> -->
+            <button class="glow-on-hover"  id = "submitbtn2" style = "color:#5390d9 ; font-size: large;">Submit</button>
+                <span></span>
+                <span></span>
+        </div>
         
 
-        <br><br>
+        
+        <div>
         <table id="table2"
         class="table table-bordered"
         class="table table-hover" 
-        border="5" 
+        border="1" 
         cellspacing="0" 
         align="center" >
-            <tr id="table2head">
+            <tr>
                 <td align="center" height="50"
-                    width="100" class="top"><br>
+                    width="80" class="top"><br>
                     <b>Day/Period</b></br>
                 </td>
                 <td align="center" height="50"
-                    width="100" class="top">
+                    width="80" class="top">
                     <b>I<br>8:00-8:50</b>
                 </td>
                 <td align="center" height="50"
-                    width="100" class="top">
+                    width="80" class="top">
                     <b>II<br>9:00-9:50</b>
                 </td>
                 <td align="center" height="50"
-                    width="100" class="top">
+                    width="80" class="top">
                     <b>III<br>10:00-10:50</b>
                 </td>
                 <td align="center" height="50"
-                    width="100" class="top">
+                    width="80" class="top">
                     <b>IV<br>11:00-11:50</b>
                 </td>
                 <td align="center" height="50"
-                    width="100" class="top">
+                    width="80" class="top">
                     <b>V<br>12:00-12:50</b>
                 </td>
                 <td align="center" height="50"
-                    width="100" class="top">
-                    <b>VI<br>1:00-1:50</b>
+                    width="80" class="top">
+                    <b>VI<br>12:50-2:00</b>
                 </td>
                 <td align="center" height="50"
-                    width="100" class="top">
+                    width="80" class="top">
                     <b>VII<br>2:00-2:50</b>
                 </td>
                 <td align="center" height="50"
-                    width="100" class="top">
+                    width="80" class="top">
                     <b>VIII<br>3:00-3:50</b>
                 </td>
                 <td align="center" height="50"
-                    width="100" class="top">
+                    width="80" class="top">
                     <b>IX<br>4:00-4:50</b>
                 </td>
                 <td align="center" height="50"
-                    width="100" class="top">
+                    width="80" class="top">
                     <b>X<br>5:00-5:50</b>
                 </td>
             </tr>
-            <div id="table2body">
             <tr>
                 <td align="center" height="50" class="side">
                     <b>Monday</b></td>
@@ -309,20 +327,36 @@
                 <td align="center" height="50" class="B2 16-16:50-FR"></td>
                 <td align="center" height="50" class="F+ 17-17:50-FR"></td>
             </tr>
-            </div>
         </table>
+        </div>
     </div>
-    <button id="batchChange">Switch batch</button>
-
-    <button id="pdfdownload">Download PDF</button>
-    <button id="iCal">Download iCal</button>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.6/jspdf.plugin.autotable.min.js"></script>
-
-<script type="text/javascript">
-
+    <br><br>
+    <nav>      
+    <ul class="nav">       
+      <li><a href="#" id="batchChange"><span class = "btntxt">Switch<br> batch</span></a></li>
+      <li><a href = "#" id="pdfdownload"><span class = "btntxt">Download<br> PDF</span></a></li>
+      <li><a href = "#" id="iCal"><span class = "btntxt">Download iCal</span></a></li>
+      
+    </ul>
+  </nav>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script> -->
+    <ul class="bg-bubbles">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul> 
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.6/jspdf.plugin.autotable.min.js"></script>
+ <script> 
     let batch = 1;
     let inEdit = false;
 
@@ -369,14 +403,12 @@
             }
         });
     }
-    
 
 
-	//function for pdf download
-	function exportpdf() {
-   		var source = "#table1";
+    function exportpdf() {
+   		var source = '#table1';
    		if (batch == 2) {
-   			source = "#table2";
+   			source = '#table2';
    		}
    		
    		var doc = new jsPDF('l', 'pt', 'a4');
@@ -402,7 +434,6 @@
     	doc.setLineWidth(2);
     	doc.autoTable({
         	html: source,  //sets the id of the table to be downloaded
-        	
         	startY: 70,
         	theme: 'grid',
         	columnStyles: {
@@ -425,12 +456,11 @@
         	        cellWidth: 70,
         	    },
         	    6: {
-        	    	halign: 'center',
-        	    	valign: 'middle',
         	        cellWidth: 70,
+                    halign:"center",
+                    valign:'middle'
         	    },
         	    7: {
-        	    	
         	        cellWidth: 70,
         	    },
         	    8: {
@@ -469,7 +499,7 @@
     document.getElementById("batchChange").addEventListener("click", () =>{
         document.getElementById("batch" + batch).style.display = "none";
         batch == 1 ? batch = 2 : batch = 1;
-        document.getElementById("batch" + batch).style.display = "block";
+        document.getElementById("batch" + batch).style.display = "flex";
     });
 
     function generateUUID() { // Public Domain/MIT
@@ -564,6 +594,7 @@
     document.getElementById("iCal").addEventListener("click", () => {
         var calText="BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:TimeTableApp\nCALSCALE:GREGORIAN\nMETHOD:PUBLISH";
         document.querySelectorAll("td").forEach(e => {
+            console.log("HI");
             var text = e.innerHTML.trim();
             var s = getFormattedDate();
             if(e.classList[0] == "lunch" || e.classList[0] == "top" || e.classList[0] == "side" || text == "" || e.offsetParent == null)
