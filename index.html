@@ -37,7 +37,7 @@
         border="5" 
         cellspacing="0" 
         align="center" >
-            <tr>
+            <tr id="table1head">
                 <td align="center" height="50"
                     width="100" class="top"><br>
                     <b>Day/Period</b></br>
@@ -83,6 +83,7 @@
                     <b>X<br>5:00-5:50</b>
                 </td>
             </tr>
+            <div id="table1body">
             <tr>
                 <td align="center" height="50" class="side">
                     <b>Monday</b></td>
@@ -153,6 +154,7 @@
                 </td>
                 <td align="center" height="50" class="F+"></td>
             </tr>
+            </div>
         </table>
     </div>
 
@@ -189,7 +191,7 @@
         border="5" 
         cellspacing="0" 
         align="center" >
-            <tr>
+            <tr id="table2head">
                 <td align="center" height="50"
                     width="100" class="top"><br>
                     <b>Day/Period</b></br>
@@ -235,6 +237,7 @@
                     <b>X<br>5:00-5:50</b>
                 </td>
             </tr>
+            <div id="table2body">
             <tr>
                 <td align="center" height="50" class="side">
                     <b>Monday</b></td>
@@ -305,6 +308,7 @@
                 <td align="center" height="50" class="B2"></td>
                 <td align="center" height="50" class="F+"></td>
             </tr>
+            </div>
         </table>
     </div>
     <button id="batchChange">Switch batch</button>
@@ -318,11 +322,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.6/jspdf.plugin.autotable.min.js"></script>
 
 <script type="text/javascript">
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-</body>
- <script>
-
 
     let batch = 1;
     let inEdit = false;
@@ -368,9 +367,9 @@
 
 	//function for pdf download
 	function exportpdf() {
-   		var source = '#table1';
+   		var source = "#table1";
    		if (batch == 2) {
-   			source = '#table2';
+   			source = "#table2";
    		}
    		
    		var doc = new jsPDF('l', 'pt', 'a4');
@@ -396,6 +395,7 @@
     	doc.setLineWidth(2);
     	doc.autoTable({
         	html: source,  //sets the id of the table to be downloaded
+        	
         	startY: 70,
         	theme: 'grid',
         	columnStyles: {
@@ -418,9 +418,12 @@
         	        cellWidth: 70,
         	    },
         	    6: {
+        	    	halign: 'center',
+        	    	valign: 'middle',
         	        cellWidth: 70,
         	    },
         	    7: {
+        	    	
         	        cellWidth: 70,
         	    },
         	    8: {
