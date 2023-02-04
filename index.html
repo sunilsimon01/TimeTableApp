@@ -1,184 +1,386 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <h1>TIME TABLE APP</h1>
-        <div><label>Enter course name: <input id="course" name="course" type="text"/></label>
-        <label>Select slot
-            <select name="slot" id="slot">
-                <option value="A1">A1</option>
-                <option value="B1">B1</option>
-                <option value="C1">C1</option>
-                <option value="D1">D1</option>
-                <option value="E1">E1</option>
-                <option value="F">F</option>
-                <option value="G">G</option>
-                <option value="H">H</option>
-                <option value="P1">P1</option>
-                <option value="Q1">Q1</option>
-                <option value="R1">R1</option>
-                <option value="S1">S1</option>
-                <option value="T1">T1</option>
-              </select>
-        </label>
-        <label> Include Plus Slots 
-            <input type="checkbox" id="Plus" name="Plus" value="includePlus">
-        </label>
-        <!-- <button id = "submitbtn">Hover Me</button></div> -->
-        
-            <div class="outer button">
-               <button id = "submitbtn">Submit</button>
-               <span></span>
-               <span></span>
-            </div>
-            </div>
-        <!-- <button id="submitbtn">Submit</button></div>  -->
-    
 
+</head>
+<body >
+    <div class = "wrapper">
+     <br><br>
+    <h1 style="display: block;">TIME TABLE APP</h1>
     <br><br>
-    <table 
-    border = "1" 
-    cellspacing="0" 
-    align="center" >
-        <tr>
-            <td align="center" height="50"
-                width="100"><br>
-                <b>Day/Period</b></br>
-            </td>
-            <td align="center" height="50"
-                width="100">
-                <b>I<br>8:00-8:50</b>
-            </td>
-            <td align="center" height="50"
-                width="100">
-                <b>II<br>9:00-9:50</b>
-            </td>
-            <td align="center" height="50"
-                width="100">
-                <b>III<br>10:00-10:50</b>
-            </td>
-            <td align="center" height="50"
-                width="100">
-                <b>IV<br>11:00-11:50</b>
-            </td>
-            <td align="center" height="50"
-                width="100">
-                <b>V<br>12:00-12:50</b>
-            </td>
-            <td align="center" height="50"
-                width="100">
-                <b>VI<br>12:50-2:00</b>
-            </td>
-            <td align="center" height="50"
-                width="100">
-                <b>VII<br>2:00-2:50</b>
-            </td>
-            <td align="center" height="50"
-                width="100">
-                <b>VIII<br>3:00-3:50</b>
-            </td>
-            <td align="center" height="50"
-                width="100">
-                <b>IX<br>4:00-4:50</b>
-            </td>
-            <td align="center" height="50"
-                width="100">
-                <b>X<br>5:00-5:50</b>
-            </td>
-        </tr>
-        <tr>
-            <td align="center" height="50">
-                <b>Monday</b></td>
-            <td align="center" height="50" class="F" id="11"></td>
-            <td align="center" height="50" class="A1" id="12"></td>
-            <td align="center" height="50" class="B1" id="13"></td>
-            <td align="center" height="50" class="C1" id="14"></td>
-            <td align="center" height="50" class="D1+" id="15"></td>
-            <td rowspan="6" align="center" height="50">
-                <h2>L<br>U<br>N<br>C<br>H</h2>
-            </td>
-            <td colspan="3" align="center"
-                height="50" id="P1"></td>
-            <td align="center" height="50" class="G"></td>
-        </tr>
-        <tr>
-            <td align="center" height="50">
-                <b>Tuesday</b>
-            </td>
-            <td align="center" height="50" class="H"></td>
-            <td align="center" height="50" class="B1"></td>
-            <td align="center" height="50" class="C1"></td>
-            <td align="center" height="50" class="D1"></td>
-            <td align="center" height="50" class="E1+"></td>
-            <td colspan="3" align="center"
-                height="50" class="Q1"></td>
-            <td align="center" height="50" class="F"></td>
-        </tr>
-        <tr>
-            <td align="center" height="50">
-                <b>Wednesday</b>
-            </td>
-            <td align="center" height="50" class="G"></td>
-            <td align="center" height="50" class="C1"></td>
-            <td align="center" height="50" class="D1"></td>
-            <td align="center" height="50" class="E1"></td>
-            <td align="center" height="50" class="A1+"></td>
-            <td colspan="3" align="center"
-                height="50" class="R1">
-            </td>
-            <td align="center" height="50" class="H"></td>
-        </tr>
-        <tr>
-            <td align="center" height="50">
-                <b>Thursday</b>
-            </td>
-            <td align="center" height="50" class="F"></td>
-            <td align="center" height="50" class="D1"></td>
-            <td align="center" height="50" class="E1"></td>
-            <td align="center" height="50" class="A1"></td>
-            <td align="center" height="50" class="B1+"></td>
-            <td colspan="3" align="center"
-                height="50" class="S1">
-            </td>
-            <td align="center" height="50" class="G"></td>
-        </tr>
-        <tr>
-            <td align="center" height="50">
-                <b>Friday</b>
-            </td>
-            <td align="center" height="50" class="H"></td>
-            <td align="center" height="50" class="E1"></td>
-            <td align="center" height="50" class="A1"></td>
-            <td align="center" height="50" class="B1"></td>
-            <td align="center" height="50" class="C1+"></td>
-            <td colspan="3" align="center"
-                height="50" class="T1">
-            </td>
-            <td align="center" height="50" class="F+"></td>
-        </tr>
-    </table>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+        <div id="batch1" style="display: flex" >
+
+            <div id = "details"><label>Enter course name: <input id="course1" name="course" type="text"/></label>
+            <label>Select slot
+                <select name="slot" id="slot1">
+                    <option value="A1">A1</option>
+                    <option value="B1">B1</option>
+                    <option value="C1">C1</option>
+                    <option value="D1">D1</option>
+                    <option value="E1">E1</option>
+                    <option value="F">F</option>
+                    <option value="G">G</option>
+                    <option value="H">H</option>
+                    <option value="P1">P1</option>
+                    <option value="Q1">Q1</option>
+                    <option value="R1">R1</option>
+                    <option value="S1">S1</option>
+                    <option value="T1">T1</option>
+                </select>
+            </label>
+            <label> Include Plus Slots 
+                <input type="checkbox" id="Plus1" name="Plus" value="includePlus">
+            </label>
+            <!-- <button id = "submitbtn1">Add</button></div> -->
+            <!-- <div class="outer button"> -->
+                <button class="glow-on-hover"  id = "submitbtn1" style = "color:#5390d9 ; font-size: large;">Submit</button>
+                <span></span>
+                <span></span>
+             <!-- </div> -->
+             </div>
+        
+
+        
+        <div>
+        <table
+        class="table table-bordered"
+        class="table table-hover" 
+        border="1" 
+        cellspacing="0" 
+        align="center" 
+        >
+            <tr>
+                <td align="center" height="50"
+                    width="80" class=""><br>
+                    <b>Day/Period</b></br>
+                </td>
+                <td align="center" height="50"
+                    width="80">
+                    <b>I<br>8:00-8:50</b>
+                </td>
+                <td align="center" height="50"
+                    width="80">
+                    <b>II<br>9:00-9:50</b>
+                </td>
+                <td align="center" height="50"
+                    width="80">
+                    <b>III<br>10:00-10:50</b>
+                </td>
+                <td align="center" height="50"
+                    width="80">
+                    <b>IV<br>11:00-11:50</b>
+                </td>
+                <td align="center" height="50"
+                    width="80">
+                    <b>V<br>12:00-12:50</b>
+                </td>
+                <td align="center" height="50"
+                    width="80">
+                    <b>VI<br>12:50-2:00</b>
+                </td>
+                <td align="center" height="50"
+                    width="80">
+                    <b>VII<br>2:00-2:50</b>
+                </td>
+                <td align="center" height="50"
+                    width="80">
+                    <b>VIII<br>3:00-3:50</b>
+                </td>
+                <td align="center" height="50"
+                    width="80">
+                    <b>IX<br>4:00-4:50</b>
+                </td>
+                <td align="center" height="50"
+                    width="80">
+                    <b>X<br>5:00-5:50</b>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" height="50">
+                    <b>Monday</b></td>
+                <td align="center" height="50" class="F" id="11"></td>
+                <td align="center" height="50" class="A1" id="12"></td>
+                <td align="center" height="50" class="B1" id="13"></td>
+                <td align="center" height="50" class="C1" id="14"></td>
+                <td align="center" height="50" class="D1+" id="15"></td>
+                <td rowspan="6" align="center" height="50" class="lunch">
+                    <h2>L<br>U<br>N<br>C<br>H</h2>
+                </td>
+                <td colspan="3" align="center"
+                    height="50" id="P1"></td>
+                <td align="center" height="50" class="G"></td>
+            </tr>
+            <tr>
+                <td align="center" height="50">
+                    <b>Tuesday</b>
+                </td>
+                <td align="center" height="50" class="H"></td>
+                <td align="center" height="50" class="B1"></td>
+                <td align="center" height="50" class="C1"></td>
+                <td align="center" height="50" class="D1"></td>
+                <td align="center" height="50" class="E1+"></td>
+                <td colspan="3" align="center"
+                    height="50" class="Q1"></td>
+                <td align="center" height="50" class="F"></td>
+            </tr>
+            <tr>
+                <td align="center" height="50">
+                    <b>Wednesday</b>
+                </td>
+                <td align="center" height="50" class="G"></td>
+                <td align="center" height="50" class="C1"></td>
+                <td align="center" height="50" class="D1"></td>
+                <td align="center" height="50" class="E1"></td>
+                <td align="center" height="50" class="A1+"></td>
+                <td colspan="3" align="center"
+                    height="50" class="R1">
+                </td>
+                <td align="center" height="50" class="H"></td>
+            </tr>
+            <tr>
+                <td align="center" height="50">
+                    <b>Thursday</b>
+                </td>
+                <td align="center" height="50" class="F"></td>
+                <td align="center" height="50" class="D1"></td>
+                <td align="center" height="50" class="E1"></td>
+                <td align="center" height="50" class="A1"></td>
+                <td align="center" height="50" class="B1+"></td>
+                <td colspan="3" align="center"
+                    height="50" class="S1">
+                </td>
+                <td align="center" height="50" class="G"></td>
+            </tr>
+            <tr>
+                <td align="center" height="50">
+                    <b>Friday</b>
+                </td>
+                <td align="center" height="50" class="H"></td>
+                <td align="center" height="50" class="E1"></td>
+                <td align="center" height="50" class="A1"></td>
+                <td align="center" height="50" class="B1"></td>
+                <td align="center" height="50" class="C1+"></td>
+                <td colspan="3" align="center"
+                    height="50" class="T1">
+                </td>
+                <td align="center" height="50" class="F+"></td>
+            </tr>
+        </table>
+    </div>
+    </div>
+
+    <!--     Second batch     -->
+    <div id="batch2" style="display: none;">
+            <div id = "details2"><label>Enter course name: <input id="course2" name="course" type="text"/></label>
+            <label>Select slot
+                <select name="slot" id="slot2">
+                    <option value="A2">A2</option>
+                    <option value="B2">B2</option>
+                    <option value="C2">C2</option>
+                    <option value="D2">D2</option>
+                    <option value="E2">E2</option>
+                    <option value="F">F</option>
+                    <option value="G">G</option>
+                    <option value="H">H</option>
+                    <option value="P2">P2</option>
+                    <option value="Q2">Q2</option>
+                    <option value="R2">R2</option>
+                    <option value="S2">S2</option>
+                    <option value="T2">T2</option>
+                </select>
+            </label>
+            <label> Include Plus Slots 
+                <input type="checkbox" id="Plus2" name="Plus" value="includePlus">
+            </label>
+            <!-- <button id = "submitbtn2">Add</button></div> -->
+            <div class="outer button">
+                <button id = "submitbtn2">Submit</button>
+                <span></span>
+                <span></span>
+             </div>
+             </div>
+        
+
+        
+        <div>
+        <table 
+        border="1" 
+        cellspacing="0" 
+        align="center" >
+            <tr>
+                <td align="center" height="50"
+                    width="80" class="top"><br>
+                    <b>Day/Period</b></br>
+                </td>
+                <td align="center" height="50"
+                    width="80" class="top">
+                    <b>I<br>8:00-8:50</b>
+                </td>
+                <td align="center" height="50"
+                    width="80" class="top">
+                    <b>II<br>9:00-9:50</b>
+                </td>
+                <td align="center" height="50"
+                    width="80" class="top">
+                    <b>III<br>10:00-10:50</b>
+                </td>
+                <td align="center" height="50"
+                    width="80" class="top">
+                    <b>IV<br>11:00-11:50</b>
+                </td>
+                <td align="center" height="50"
+                    width="80" class="top">
+                    <b>V<br>12:00-12:50</b>
+                </td>
+                <td align="center" height="50"
+                    width="80" class="top">
+                    <b>VI<br>12:50-2:00</b>
+                </td>
+                <td align="center" height="50"
+                    width="80" class="top">
+                    <b>VII<br>2:00-2:50</b>
+                </td>
+                <td align="center" height="50"
+                    width="80" class="top">
+                    <b>VIII<br>3:00-3:50</b>
+                </td>
+                <td align="center" height="50"
+                    width="80" class="top">
+                    <b>IX<br>4:00-4:50</b>
+                </td>
+                <td align="center" height="50"
+                    width="80" class="top">
+                    <b>X<br>5:00-5:50</b>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" height="50">
+                    <b>Monday</b></td>
+                <td align="center" height="50" class="F" id="11"></td>
+                <td colspan="3" align="center"
+                    height="50" id="P2"></td>
+                <td rowspan="6" align="center" height="50">
+                    <h2>L<br>U<br>N<br>C<br>H</h2>
+                </td>
+                <td align="center" height="50" class="D2+" id="12"></td>
+                <td align="center" height="50" class="A2" id="13"></td>
+                <td align="center" height="50" class="B2" id="14"></td>
+                <td align="center" height="50" class="C2" id="15"></td>
+                <td align="center" height="50" class="G"></td>
+            </tr>
+            <tr>
+                <td align="center" height="50">
+                    <b>Tuesday</b>
+                </td>
+                <td align="center" height="50" class="H"></td>
+                <td colspan="3" align="center"
+                    height="50" class="Q2"></td>
+                <td align="center" height="50" class="E2+"></td>
+                <td align="center" height="50" class="B2"></td>
+                <td align="center" height="50" class="C2"></td>
+                <td align="center" height="50" class="D2"></td>
+                <td align="center" height="50" class="F"></td>
+            </tr>
+            <tr>
+                <td align="center" height="50">
+                    <b>Wednesday</b>
+                </td>
+                <td align="center" height="50" class="G"></td>
+                <td colspan="3" align="center"
+                    height="50" class="R2">
+                </td>
+                <td align="center" height="50" class="A2+"></td>
+                <td align="center" height="50" class="C2"></td>
+                <td align="center" height="50" class="D2"></td>
+                <td align="center" height="50" class="E2"></td>
+                <td align="center" height="50" class="H"></td>
+            </tr>
+            <tr>
+                <td align="center" height="50">
+                    <b>Thursday</b>
+                </td>
+                <td align="center" height="50" class="F"></td>
+                <td colspan="3" align="center"
+                    height="50" class="S2">
+                </td>
+                <td align="center" height="50" class="B2+"></td>
+                <td align="center" height="50" class="D2"></td>
+                <td align="center" height="50" class="E2"></td>
+                <td align="center" height="50" class="A2"></td>
+                <td align="center" height="50" class="G"></td>
+            </tr>
+            <tr>
+                <td align="center" height="50">
+                    <b>Friday</b>
+                </td>
+                <td align="center" height="50" class="H"></td>
+                <td colspan="3" align="center"
+                    height="50" class="T2">
+                </td>
+                <td align="center" height="50" class="C2+"></td>
+                <td align="center" height="50" class="E2"></td>
+                <td align="center" height="50" class="A2"></td>
+                <td align="center" height="50" class="B2"></td>
+                <td align="center" height="50" class="F+"></td>
+            </tr>
+        </table>
+    </div>
+    </div>
+    <button id="batchChange">Switch batch</button>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script> -->
+    <ul class="bg-bubbles">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul> 
+    </div>
 </body>
- <script>
+ <script> 
+    let batch = 1;
     function validateForm()
     {
-        // let courseName = document.forms["addValue"]["course"].value;
-        // let slot = document.forms["addValue"]["slot"].value;
-        // let slots = document.getElementsByClassName(slot);
-
-        let courseName = document.getElementById("course").value;
-        let slot = document.getElementById("slot").value;
+        let courseName = document.getElementById("course" + batch).value;
+        let slot = document.getElementById("slot" + batch).value;
+        let checked = document.getElementById("Plus" + batch);
         let slots = document.getElementsByClassName(slot);
+        let slotsPlus = document.getElementsByClassName(slot + "+");
         for(var i = 0; i < slots.length; i++)
-        {
             slots[i].innerHTML = courseName;
-        }
+        if(checked.checked)
+            for(var i = 0; i < slotsPlus.length; i++)
+                slotsPlus[i].innerHTML = courseName;
+        document.getElementById("course" + batch).value = "";
+        document.getElementById("slot" + batch).value = "A" + batch;
+        checked.checked = false;
     }
 
-    var btn = document.getElementById("submitbtn");
+    function enterValue()
+    {
+
+    }
+
+    document.getElementsByTagName("td")
+
+    var btn = document.getElementById("submitbtn1");
     btn.addEventListener("click", validateForm);
+    document.getElementById("submitbtn2").addEventListener("click", validateForm);
+
+    document.getElementById("batchChange").addEventListener("click", () =>{
+        document.getElementById("batch" + batch).style.display = "none";
+        batch == 1 ? batch = 2 : batch = 1;
+        document.getElementById("batch" + batch).style.display = "flex";
+    });
  </script>
 
  
