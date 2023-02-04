@@ -156,6 +156,12 @@
         let courseName = document.getElementById("course").value;
         let slot = document.getElementById("slot").value;
         let slots = document.getElementsByClassName(slot);
+        
+        if (document.getElementById("Plus").checked) {
+        	slots.append(document.getElementsByClassName(slot + "+"));
+        }
+        //console.log(slots);
+        
         for(var i = 0; i < slots.length; i++)
         {
             slots[i].innerHTML = courseName;
