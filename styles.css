@@ -10,7 +10,7 @@
     padding: 0;
     font-weight: 300;
     font-family: 'Courier Prime', monospace;
-    color:#70e000;
+    color:#9ef01a;
   }
   .neumorphic{
     
@@ -437,7 +437,7 @@ h1{
   }
 .div{
     display: flex;
-    color: 5390d9;
+    color: #5390d9;
     font-size: large;
     justify-content:space-around;
     
