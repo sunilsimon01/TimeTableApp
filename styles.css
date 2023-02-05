@@ -61,7 +61,8 @@
     display: block;
     width: 40px;
     height: 40px;
-    background-color: rgba(210, 207, 207, 0.899);
+    background-color:#708090;
+    opacity:.4;
     bottom: -160px;
     -webkit-animation: square 25s infinite;
     animation: square 25s infinite;
