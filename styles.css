@@ -13,14 +13,13 @@
     color:#70e000;
   }
   .neumorphic{
-    
     /* transform: translate(-50%,-50%); */
     /* top: 0%;
     left: 50%; */
     font-family: 'Poppins',sans-serif;
     font-weight: bold;
     font-size: 80px;
-    color: #e0e5eb;
+    color: #939393;
     text-shadow: 
     -8px -8px 12px rgba(255,255,255,0.4),
     8px 8px 12px rgba(0,0,0,0.08);
@@ -188,34 +187,12 @@ h1{
 }
 .username, .password {
   display: block;
-   margin-bottom: 30px; 
+  margin-bottom: 30px; 
   border-radius: 25px;
   box-shadow: inset 8px 8px 8px #cbced1,
               inset -8px -8px 8px #ffffff;
 }
-/* .signin-button {
-  outline: none;
-  border:none;
-  cursor: pointer;
-  width:100%;
-  height: 60px;
-  border-radius: 30px;
-  font-size: 20px;
-  font-weight: 700;
-  font-family: 'Lato', sans-serif;
-  color:#fff;
-  text-align: center;
-  background: #24cfaa;
-  box-shadow: 3px 3px 8px #b1b1b1,
-              -3px -3px 8px #ffffff;
-  transition: 0.5s;
-}
-.signin-button:hover {
-  background:#2fdbb6;
-}
-.signin-button:active {
-  background:#1da88a;
-} */
+
 .signin-button {
   padding: 1em 0.5em -1em 0.5em;
   
@@ -437,7 +414,7 @@ h1{
   }
 .div{
     display: flex;
-    color: 5390d9;
+    color: #5390d9;
     font-size: large;
     justify-content:space-around;
     
