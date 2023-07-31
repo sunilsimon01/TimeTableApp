@@ -36,6 +36,25 @@
     backdrop-filter: blur(10px);
     border-radius: 20px;
  }
+ .neumorphic2{
+  /* transform: translate(-50%,-50%); */
+  /* top: 0%;
+  left: 50%; */
+  font-family: 'Poppins',sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  color: #939393;
+  text-shadow: 
+  -8px -8px 12px rgba(255,255,255,0.4),
+  8px 8px 12px rgba(0,0,0,0.08);
+  caret-color:#262626;
+  outline: none;
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+}
+ 
+
+ 
  
   .wrapper {
     display: block;

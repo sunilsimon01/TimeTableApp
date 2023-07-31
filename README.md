@@ -7,6 +7,8 @@ To run the App, just clone the repository and open the index.html file in your b
 ## Usage
 By using the Switch Batch button, users can switch between batch 1 and batch 2.
 
+By using the Switch Semester button, users can switch between monsoon semester and winter semester.
+
 Users can automatically enter a course in all their slots by filling the form in the left side, or by manually editing cells of the table.
 
 After completing the time table, users can export as a PDF document or as a calendar file.
