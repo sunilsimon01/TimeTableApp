@@ -16,7 +16,10 @@
      <br><br>
      <!-- <h1 class = "text"style="margin: auto;">TIME TABLE APP</h1> -->
      <div class="div" style="display: flex; justify-content: center;"><span contenteditable="false" class="neumorphic">CLOCKWISE</span></div>
-    <br><br>
+     <div id="sem1" class="div" style="display: flex; justify-content: center; "><span contenteditable="false" class="neumorphic2">Winter Semester</span></div>
+    <div id="sem2" class="div" style="display: none; justify-content: center;"><span contenteditable="false" class="neumorphic2">Monsoon Semster</span></div>
+
+     <br><br>
     
         <div class="cover" id="batch1" style="display: flex" >
             <div class="div" id = "details">
@@ -186,7 +189,7 @@
     </div>
 
     </div>
-
+    
     <!--     Second batch     -->
     <div class = "cover "id="batch2" style="display: none;">
             <div id = "details2">
@@ -356,6 +359,7 @@
     <nav>      
     <ul class="nav">       
       <li><a href="#" id="batchChange"><span class = "btntxt">Switch<br> batch</span></a></li>
+      <li><a href="#" id="semChange"><span class = "btntxt">Switch<br> semester</span></a></li>
       <li><a href = "#" id="pdfdownload"><span class = "btntxt">Download<br> PDF</span></a></li>
       <li><a href = "#" id="iCal"><span class = "btntxt">Download ICS</span></a></li>
       <li><a href = "https://github.com/sunilsimon01/TimeTableApp" id="GitHub Repo"><span class = "btntxt">GitHub<br>Repo</span></a></li>
@@ -405,7 +409,7 @@
  <script> 
     let batch = 1;
     let inEdit = false;
-
+    let sem=1;
     function validateForm()
     {
         let courseName = document.getElementById("course" + batch).value;
@@ -550,6 +554,21 @@
         document.getElementById("batch" + batch).style.display = "flex";
     });
 
+    document.getElementById("semChange").addEventListener("click", () =>{
+        if (sem === 1) {
+    document.getElementById("sem1").style.display = "none";
+    document.getElementById("sem2").style.display = "flex";
+  } else if (sem === 2) {
+    document.getElementById("sem2").style.display = "none";
+    document.getElementById("sem1").style.display = "flex";
+  }
+
+        document.getElementById("sem" + sem).style.display = "none";
+        sem == 1 ? sem = 2 : sem = 1;
+        document.getElementById("sem" + sem).style.display = "flex";
+        alert("Your message goes here");
+    });
+
     function generateUUID() { // Public Domain/MIT
     var d = new Date().getTime();//Timestamp
     var d2 = ((typeof performance !== 'undefined') && performance.now && (performance.now()*1000)) || 0;//Time in microseconds since page-load or 0 if unsupported
@@ -565,34 +584,47 @@
         return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
     });
 }
-    function getFormattedDate()
-    {
-        const date = new Date();
-        var s = "";
-        s += date.getFullYear();
-        if(Math.floor((date.getMonth() + 1) / 10) == 0)
-            s += "0";
-        s += date.getMonth() + 1;
-        if(Math.floor(date.getDate() / 10) == 0)
-            s += "0";
-        s += date.getDate();
-        s += "T";
-        if(Math.floor(date.getHours() / 10) == 0)
-            s += "0";
-        s += date.getHours();
-        if(Math.floor(date.getMinutes() / 10) == 0)
-            s += "0";
-        s += date.getMinutes();
-        if(Math.floor(date.getSeconds() / 10) == 0)
-            s += "0";
-        s += date.getSeconds();
-        return s;
-    }
+function getFormattedDate() {
+  const date = new Date();
+  var s = "";
+  s += date.getFullYear();
+
+  if (sem === 1) {
+    // If the semester is 1 (January), use the current month value
+    if (Math.floor((date.getMonth() + 1) / 10) === 0)
+      s += "0";
+    s += date.getMonth() + 1;
+  } else if (sem === 2) {
+    // If the semester is 2 (August), use the value 8 for August
+    if (Math.floor(8 / 10) === 0)
+      s += "0";
+    s += "08"; // Set the month to August (8)
+  }
+
+  if (Math.floor(date.getDate() / 10) === 0)
+    s += "0";
+  s += date.getDate();
+  s += "T";
+  if (Math.floor(date.getHours() / 10) === 0)
+    s += "0";
+  s += date.getHours();
+  if (Math.floor(date.getMinutes() / 10) === 0)
+    s += "0";
+  s += date.getMinutes();
+  if (Math.floor(date.getSeconds() / 10) === 0)
+    s += "0";
+  s += date.getSeconds();
+  return s;
+}
+
 
     function getStart(t)
     {
         var s = "";
+        if(sem==1)
+        {
         s += "202301";
+        
         switch(t[2])
         {
             case "SU":  s += "01";
@@ -612,11 +644,39 @@
         }
         s += "T" + t[0] + "0000";
         return s;
+        }
+        else
+        {
+            s += "202308";
+        
+        switch(t[2])
+        {
+            case "SU":  s += "06";
+                        break;
+            case "MO":  s += "07";
+                        break;
+            case "TU":  s += "01";
+                        break;
+            case "WE":  s += "02";
+                        break;
+            case "TH":  s += "03";
+                        break;
+            case "FR":  s += "04";
+                        break;
+            case "SA":  s += "05";
+                        break;
+        }
+        s += "T" + t[0] + "0000";
+        return s;
+        }
+        
     }
 
     function getEnd(t)
     {
         var s = "";
+        if(sem==1)
+        {
         s += "202301";
         switch(t[2])
         {
@@ -639,6 +699,34 @@
         return s;
     }
 
+        else
+        {
+            s += "202308";
+        
+        switch(t[2])
+        {
+            case "SU":  s += "06";
+                        break;
+            case "MO":  s += "07";
+                        break;
+            case "TU":  s += "01";
+                        break;
+            case "WE":  s += "02";
+                        break;
+            case "TH":  s += "03";
+                        break;
+            case "FR":  s += "04";
+                        break;
+            case "SA":  s += "05";
+                        break;
+        }
+        s += "T" + t[1].split(":")[0] + "5000";
+        return s;
+
+        }
+
+    }
+
     document.getElementById("iCal").addEventListener("click", () => {
         var calText="BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:TimeTableApp\nCALSCALE:GREGORIAN\nMETHOD:PUBLISH";
         document.querySelectorAll("td").forEach(e => {
@@ -648,7 +736,18 @@
             if(e.classList[0] == "lunch" || e.classList[0] == "top" || e.classList[0] == "side" || text == "" || e.offsetParent == null)
                 return;
             var t = e.classList[1].split("-");
-            calText += "\nBEGIN:VEVENT\nSUMMARY:" + text + "\nUID:"+ generateUUID() +"\nDTSTART:" + getStart(t) + "\nDTEND:" + getEnd(t) + "\nDTSTAMP:"+ s +"\nRRULE:FREQ=WEEKLY;BYDAY="+ t[2] +";UNTIL=20230430;BYSETPOS=1;BYHOUR="+t[0]+";BYMINUTE=0\nEND:VEVENT";
+            calText += "\nBEGIN:VEVENT\nSUMMARY:" + text + "\nUID:"+ generateUUID() +"\nDTSTART:" + getStart(t) + "\nDTEND:" + getEnd(t) + "\nDTSTAMP:"+ s;
+
+// Set the RRULE based on the semester
+        if (sem === 1) {
+     calText += "\nRRULE:FREQ=WEEKLY;BYDAY=" + t[2] + ";UNTIL=20230430;BYSETPOS=1;BYHOUR=" + t[0] + ";BYMINUTE=0";
+        }
+        else if (sem === 2) {
+    calText += "\nRRULE:FREQ=WEEKLY;BYDAY=" + t[2] + ";UNTIL=20231231;BYSETPOS=1;BYHOUR=" + t[0] + ";BYMINUTE=0";
+    }
+
+calText += "\nEND:VEVENT";
+    
         });
         calText += "\nEND:VCALENDAR";
 
