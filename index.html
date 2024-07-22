@@ -622,23 +622,25 @@ function getFormattedDate() {
         var s = "";
         if(sem==1)
         {
-        s += "202301";
+
+            //change the year in the below line, and set the 1st day of January to 01, in 2024, it was monday
+        s += "202401";
         
         switch(t[2])
         {
-            case "SU":  s += "01";
+            case "SU":  s += "07";
                         break;
-            case "MO":  s += "02";
+            case "MO":  s += "01";
                         break;
-            case "TU":  s += "03";
+            case "TU":  s += "02";
                         break;
-            case "WE":  s += "04";
+            case "WE":  s += "03";
                         break;
-            case "TH":  s += "05";
+            case "TH":  s += "04";
                         break;
-            case "FR":  s += "06";
+            case "FR":  s += "05";
                         break;
-            case "SA":  s += "07";
+            case "SA":  s += "06";
                         break;
         }
         s += "T" + t[0] + "0000";
@@ -646,23 +648,24 @@ function getFormattedDate() {
         }
         else
         {
-            s += "202308";
+            //Same here, change the year and the first day of August to 01
+            s += "202408";
         
         switch(t[2])
         {
-            case "SU":  s += "06";
+            case "SU":  s += "04";
                         break;
-            case "MO":  s += "07";
+            case "MO":  s += "05";
                         break;
-            case "TU":  s += "01";
+            case "TU":  s += "06";
                         break;
-            case "WE":  s += "02";
+            case "WE":  s += "07";
                         break;
-            case "TH":  s += "03";
+            case "TH":  s += "01";
                         break;
-            case "FR":  s += "04";
+            case "FR":  s += "02";
                         break;
-            case "SA":  s += "05";
+            case "SA":  s += "03";
                         break;
         }
         s += "T" + t[0] + "0000";
@@ -676,22 +679,24 @@ function getFormattedDate() {
         var s = "";
         if(sem==1)
         {
-        s += "202301";
+
+            //change the year in the below line, and set the 1st day of January to 01, in 2024, it was monday
+        s += "202401";
         switch(t[2])
         {
-            case "SU":  s += "01";
+            case "SU":  s += "07";
                         break;
-            case "MO":  s += "02";
+            case "MO":  s += "01";
                         break;
-            case "TU":  s += "03";
+            case "TU":  s += "02";
                         break;
-            case "WE":  s += "04";
+            case "WE":  s += "03";
                         break;
-            case "TH":  s += "05";
+            case "TH":  s += "04";
                         break;
-            case "FR":  s += "06";
+            case "FR":  s += "05";
                         break;
-            case "SA":  s += "07";
+            case "SA":  s += "06";
                         break;
         }
         s += "T" + t[1].split(":")[0] + "5000";
@@ -700,23 +705,24 @@ function getFormattedDate() {
 
         else
         {
-            s += "202308";
+            //Same here, change the year and the first day of August to 01
+            s += "202408";
         
         switch(t[2])
         {
-            case "SU":  s += "06";
+            case "SU":  s += "04";
                         break;
-            case "MO":  s += "07";
+            case "MO":  s += "05";
                         break;
-            case "TU":  s += "01";
+            case "TU":  s += "06";
                         break;
-            case "WE":  s += "02";
+            case "WE":  s += "07";
                         break;
-            case "TH":  s += "03";
+            case "TH":  s += "01";
                         break;
-            case "FR":  s += "04";
+            case "FR":  s += "02";
                         break;
-            case "SA":  s += "05";
+            case "SA":  s += "03";
                         break;
         }
         s += "T" + t[1].split(":")[0] + "5000";
@@ -739,10 +745,10 @@ function getFormattedDate() {
 
 // Set the RRULE based on the semester
         if (sem === 1) {
-     calText += "\nRRULE:FREQ=WEEKLY;BYDAY=" + t[2] + ";UNTIL=20230430;BYSETPOS=1;BYHOUR=" + t[0] + ";BYMINUTE=0";
+     calText += "\nRRULE:FREQ=WEEKLY;BYDAY=" + t[2] + ";UNTIL=20240430;BYSETPOS=1;BYHOUR=" + t[0] + ";BYMINUTE=0";
         }
         else if (sem === 2) {
-    calText += "\nRRULE:FREQ=WEEKLY;BYDAY=" + t[2] + ";UNTIL=20231231;BYSETPOS=1;BYHOUR=" + t[0] + ";BYMINUTE=0";
+    calText += "\nRRULE:FREQ=WEEKLY;BYDAY=" + t[2] + ";UNTIL=20241231;BYSETPOS=1;BYHOUR=" + t[0] + ";BYMINUTE=0";
     }
 
 calText += "\nEND:VEVENT";
