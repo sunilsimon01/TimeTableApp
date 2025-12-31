@@ -488,6 +488,27 @@
         	html: source,  //sets the id of the table to be downloaded
         	startY: 70,
         	theme: 'grid',
+
+           // jsPDF autoTable ignores CSS for merged cells (colspan).
+           // Force horizontal and vertical centering for 3-hour lab slots in PDF export.
+           // Force horizontal and vertical centering for lunch slot in PDF export.
+
+            didParseCell: function (data) {
+                const cell = data.cell;
+
+                // Center lab slots (3-hour blocks)
+                if (cell.colSpan === 3) {
+                    cell.styles.halign = 'center';
+                    cell.styles.valign = 'middle';
+                }
+
+                // Center LUNCH column (rowspan across days)
+                if (cell.rowSpan === 6) {
+                    cell.styles.halign = 'center';
+                    cell.styles.valign = 'middle';
+                }
+            },
+
         	columnStyles: {
         	    0: {
         	        cellWidth: 75,

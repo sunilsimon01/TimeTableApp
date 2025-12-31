@@ -1,5 +1,20 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300);
 
+/* Center-align 3-hour lab slots (P/Q/R/S/T) in the timetable UI.
+   These cells span multiple periods using colspan=3. */
+td[colspan="3"] {
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 500;
+}
+
+/* Center-align the LUNCH column across all days (rowspan=6) */
+.lunch {
+    text-align: center;
+    vertical-align: middle;
+}
+
+
 /* body{
 
     background-color:#fae0e4;
